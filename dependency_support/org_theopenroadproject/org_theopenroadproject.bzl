@@ -21,12 +21,12 @@ def org_theopenroadproject():
     maybe(
         new_git_repository,
         name = "org_theopenroadproject",
-        commit = "21b84678f4eb0eae2e38b897e4e0d36e145f99cd",
+        commit = "e7391b172a3456ecbafd9d81d1e89b7615d5c0c0",
         init_submodules = True,
         remote = "https://github.com/The-OpenROAD-Project/OpenROAD.git",
         build_file = Label("@rules_hdl//dependency_support/org_theopenroadproject:bundled.BUILD.bazel"),
         patches = [
-            Label("@rules_hdl//dependency_support/org_theopenroadproject:0001-logging-change-to-support-silence.patch"),
+            #Label("@rules_hdl//dependency_support/org_theopenroadproject:0001-logging-change-to-support-silence.patch"),
         ],
         patch_args = [
             "-p1",
