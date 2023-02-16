@@ -21,8 +21,7 @@ def boost():
     maybe(
         git_repository,
         name = "com_github_nelhage_rules_boost",
-        # This equivalent to boost 1.78
-        commit = "c8b9b4a75c4301778d2e256b8d72ce47a6c9a1a4",
+        commit = "a96f8482a80c875a020cd9ed590b30b44e67785d",
         remote = "https://github.com/nelhage/rules_boost",
         shallow_since = "1640124117 -0800",
         patches = [
@@ -32,7 +31,7 @@ def boost():
             # Bazel to depend on the Python headers of the current Python
             # toolchain. The patch below selects the same Python headers
             # that the rest of XLS uses.
-            Label("@rules_hdl//dependency_support/boost:add_python.patch"),
-            Label("@rules_hdl//dependency_support/boost:libbacktrace.patch"),
+            #Label("@rules_hdl//dependency_support/boost:add_python.patch"),
+            #Label("@rules_hdl//dependency_support/boost:libbacktrace.patch"),
         ],
     )
