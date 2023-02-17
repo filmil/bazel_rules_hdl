@@ -88,8 +88,8 @@ cc_binary(
         ":partition_manager_swig",
         ":partition_manager_tcl",
         #PDNGen
-        ":pdngen_tcl",
-        ":pdngen_swig",
+        #":pdngen_tcl",
+        #":pdngen_swig",
         #MPL2
         ":mpl2_swig",
         ":mpl2_tcl",
@@ -224,9 +224,9 @@ cc_library(
             "src/rsz/src/Unused.cc",
             "src/drt/src/main.cpp",
             "src/utl/src/Logger.cpp",
-            "src/par/src/MLPart/mlpart/ABKCommon/abkrand_templ.cxx",
-            "src/par/src/MLPart/mlpart/Partitioners/aGreedMoveMan.cxx",
-            "src/par/src/MLPart/mlpart/Combi/grayPermut.cxx",
+            #"src/par/src/MLPart/mlpart/ABKCommon/abkrand_templ.cxx",
+            #"src/par/src/MLPart/mlpart/Partitioners/aGreedMoveMan.cxx",
+            #"src/par/src/MLPart/mlpart/Combi/grayPermut.cxx",
         ],
     ) + [
         "src/stt/src/flt/etc/POST9.cpp",
@@ -659,14 +659,15 @@ tcl_encode(
     char_array_name = "par_tcl_inits",
 )
 
-tcl_encode(
-    name = "pdngen_tcl",
-    srcs = [
-        "src/pdn/src/PdnGen.tcl",
-        "src/pdn/src/pdn.tcl",
-    ],
-    char_array_name = "pdn_tcl_inits",
-)
+# Looks like these no longer exist as files but are generated instead.
+#tcl_encode(
+    #name = "pdngen_tcl",
+    #srcs = [
+        #"src/pdn/src/PdnGen.tcl",
+        #"src/pdn/src/pdn.tcl",
+    #],
+    #char_array_name = "pdn_tcl_inits",
+#)
 
 tcl_encode(
     name = "openroad_tcl",

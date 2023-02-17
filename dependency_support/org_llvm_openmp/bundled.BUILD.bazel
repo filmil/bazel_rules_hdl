@@ -83,7 +83,7 @@ cc_library(
       "runtime/src/kmp_stats.h",
       "runtime/src/ompt-specific.h",
       "runtime/src/kmp_wrapper_getpid.h",
-      "runtime/src/tsan_annotations.h",
+      #"runtime/src/tsan_annotations.h",
       "runtime/src/ompt-general.cpp",
     ],
     textual_hdrs = [
